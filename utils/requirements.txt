@@ -1,6 +1,5 @@
 meeko==0.1.dev3
 openmm==0.2
-pdbfixer==1.8.1
 
 
 

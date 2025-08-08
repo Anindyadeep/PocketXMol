@@ -14,7 +14,7 @@ scikit-learn>=1.1.0
 networkx>=2.8
 
 # Chemistry/Biology
-rdkit>=2023.9.3
+rdkit==2023.9.3
 biopython>=1.83
 peptidebuilder==1.1.0
 openbabel-wheel
@@ -30,4 +30,3 @@ seaborn>=0.12.1
 # Additional dependencies
 meeko>=0.1.0
 openmm>=7.0.0
-pdbfixer>=1.8.1 

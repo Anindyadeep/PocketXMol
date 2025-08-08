@@ -27,7 +27,7 @@ def get_requirements():
         "networkx>=2.8",
         
         # Chemistry/Biology
-        "rdkit>=2023.9.3",
+        "rdkit==2023.9.3",
         "biopython>=1.83",
         "peptidebuilder==1.1.0",
         "openbabel-wheel",  # Use openbabel-wheel for pip compatibility
@@ -43,7 +43,6 @@ def get_requirements():
         # Additional dependencies from utils/requirements.txt
         "meeko>=0.1.0",
         "openmm>=7.0.0",  # Updated version for compatibility
-        "pdbfixer>=1.8.1",
     ]
     return requirements
 
