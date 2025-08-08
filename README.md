@@ -44,6 +44,11 @@ To setup the environment on a Linux server, you can use [Anaconda](https://docs.
 conda env create -f environment.yml
 conda activate pxm
 ```
+
+For pip installation with PyTorch extensions:
+```bash
+pip install -e . --find-links https://data.pyg.org/whl/torch-2.6.0+cu126.html
+```
 If you have a different CUDA version, you may need to modify the versions of the pytorch-related packages in the `environment.yml` file.
 
 

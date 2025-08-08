@@ -11,6 +11,12 @@ cd PocketXMol
 
 # Install in editable mode
 pip install -e .
+
+# Install PyTorch extensions separately (required)
+pip install torch-scatter torch-sparse torch-cluster
+
+# Or use the optional dependency group
+# pip install -e .[torch-extensions]
 ```
 
 ### Alternative: Install dependencies separately
