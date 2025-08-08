@@ -1,3 +1,11 @@
+"""
+PocketXMol Fields Package
+
+This package contains field models and components.
+"""
+
+__version__ = "0.1.0"
+
 from .classifier import SpatialClassifierVN, SimpleEdgePredictor, FragmentPosDecoder
 
 

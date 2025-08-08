@@ -40,7 +40,7 @@ if os.environ.get("TERM_PROGRAM") == "vscode":
     is_vscode = True
 
 
-if __name__ == '__main__':
+def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--exp_name', type=str, default='base_pxm')
     parser.add_argument('--result_root', type=str, default='./outputs_test/dock_posebusters')
@@ -169,3 +169,7 @@ if __name__ == '__main__':
     df_belief.to_csv(save_path, index=False)
         
     # print('Done. Results saved at %s' % result_path)
+
+
+if __name__ == '__main__':
+    main()

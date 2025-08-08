@@ -1,0 +1,42 @@
+# Include documentation and metadata files
+include README.md
+include LICENSE
+include environment.yml
+
+# Include all configuration files
+recursive-include configs *.yml *.yaml
+
+# Include all data files
+recursive-include data *.pdb *.sdf *.md
+
+# Include utility data files
+include utils/*.pkl.gz
+include utils/*.pkl
+recursive-include utils/linker *
+
+# Include notebook files
+recursive-include notebooks *.ipynb
+
+# Include all YAML/config files in subdirectories
+recursive-include * *.yml *.yaml
+
+# Exclude unnecessary files
+global-exclude *.pyc
+global-exclude *.pyo
+global-exclude *~
+global-exclude .DS_Store
+global-exclude .git*
+global-exclude __pycache__
+recursive-exclude * __pycache__
+recursive-exclude * *.py[co]
+
+# Include any additional script files
+recursive-include scripts *.py
+recursive-include models *.py
+recursive-include utils *.py
+recursive-include evaluate *.py
+recursive-include process *.py
+
+# Include any shell scripts or other executables
+recursive-include * *.sh
+recursive-include * *.bat 

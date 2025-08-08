@@ -77,8 +77,7 @@ def get_input_data(protein_path,
     return pocmol_data, pocket_pdb, mol
 
 
-
-if __name__ == '__main__':
+def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--config_task', type=str, default='configs/sample/examples/dock_pep_know_some.yml', help='task config')
     parser.add_argument('--config_model', type=str, default='configs/sample/pxm.yml', help='model config')
@@ -376,3 +375,6 @@ if __name__ == '__main__':
     except KeyboardInterrupt:
         logger.info('KeyboardInterrupt. Stop sampling.')
 
+
+if __name__ == '__main__':
+    main()

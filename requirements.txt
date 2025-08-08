@@ -1,0 +1,33 @@
+# Core ML/Scientific packages
+torch>=2.0.0
+pytorch-lightning
+torch-geometric>=2.3.0
+torch-scatter
+torch-sparse
+torch-cluster
+
+# Scientific computing
+numpy>=1.24,<2.0
+pandas>=1.5.2
+scipy>=1.8.0
+scikit-learn>=1.1.0
+networkx>=2.8
+
+# Chemistry/Biology
+rdkit>=2023.9.3
+biopython>=1.83
+peptidebuilder==1.1.0
+openbabel-wheel
+
+# Utilities
+easydict>=1.9
+pyyaml>=5.4.1
+tqdm>=4.64.0
+lmdb>=1.2.1
+tensorboard
+seaborn>=0.12.1
+
+# Additional dependencies
+meeko>=0.1.0
+openmm>=7.0.0
+pdbfixer>=1.8.1 

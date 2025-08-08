@@ -33,7 +33,7 @@ if os.environ.get("TERM_PROGRAM") == "vscode":
     is_vscode = True
 
 
-if __name__ == '__main__':
+def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--exp_name', type=str, default='pepdesign')
     parser.add_argument('--result_root', type=str, default='./outputs_use')
@@ -132,4 +132,6 @@ if __name__ == '__main__':
     df_belief.to_csv(os.path.join(ranking_path, f'{config_name}.csv'), index=False)
     
     
+if __name__ == '__main__':
+    main()
     

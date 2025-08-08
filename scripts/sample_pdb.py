@@ -32,7 +32,7 @@ is_vscode = False
 if os.environ.get("TERM_PROGRAM") == "vscode":
     is_vscode = True
 
-if __name__ == '__main__':
+def main():
     parser = argparse.ArgumentParser()
     # parser.add_argument('--config_task', type=str, default='configs/sample/test/dock_pepbdb/base.yml', help='task config')
     parser.add_argument('--config_task', type=str, default='configs/sample/test/pepdesign_pepbdb/base.yml', help='task config')
@@ -331,3 +331,7 @@ if __name__ == '__main__':
         # torch.save(pool, os.path.join(log_dir, 'samples_all.pt'))
     except KeyboardInterrupt:
         logger.info('KeyboardInterrupt. Stop sampling.')
+
+
+if __name__ == '__main__':
+    main()

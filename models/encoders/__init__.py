@@ -1,3 +1,11 @@
+"""
+PocketXMol Encoders Package
+
+This package contains encoder models and components.
+"""
+
+__version__ = "0.1.0"
+
 from .cftfm import CFTransformerEncoder, CFTransformerEncoderVN
 
 

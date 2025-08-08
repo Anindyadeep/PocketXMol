@@ -39,7 +39,7 @@ def make_ranking_score(gen_path):
     return df_ranking
 
 
-if __name__ == '__main__':
+def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--exp_name', type=str, default='base_pxm')
     parser.add_argument('--result_root', type=str, default='./outputs_test/dock_posebusters')
@@ -95,3 +95,7 @@ if __name__ == '__main__':
     df_ranking.to_csv(os.path.join(gen_path, 'ranking.csv'), index=False)
     
     print('Done')
+
+
+if __name__ == '__main__':
+    main()

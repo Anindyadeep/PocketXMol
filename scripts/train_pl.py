@@ -364,7 +364,7 @@ is_vscode = False
 if os.environ.get("TERM_PROGRAM") == "vscode":
     is_vscode = True
 
-if __name__ == '__main__':
+def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--config', type=str,
         default='configs/train/train_pxm.yml')
@@ -466,3 +466,7 @@ if __name__ == '__main__':
 
     trainer.fit(model, dm, ckpt_path=ckpt_path)
     print('Training finished!')
+
+
+if __name__ == '__main__':
+    main()

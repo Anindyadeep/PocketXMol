@@ -35,7 +35,7 @@ is_vscode = False
 if os.environ.get("TERM_PROGRAM") == "vscode":
     is_vscode = True
 
-if __name__ == '__main__':
+def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--config_task', type=str, default='configs/sample/test/denovo_geom/base.yml', help='task config file')
     parser.add_argument('--config_model', type=str, default='configs/sample/pxm.yml', help='model config file')
@@ -317,3 +317,7 @@ if __name__ == '__main__':
     dummy_pool = {key: ['']*len(value) for key, value in pool.items()}
     torch.save(dummy_pool, os.path.join(log_dir, 'samples_all.pt'))
     # torch.save(pool, os.path.join(log_dir, 'samples_all.pt'))
+
+
+if __name__ == '__main__':
+    main()

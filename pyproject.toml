@@ -1,0 +1,153 @@
+[build-system]
+requires = ["setuptools>=45", "wheel", "setuptools_scm[toml]>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pocketxmol"
+version = "0.1.0"
+description = "PocketXMol: A pocket-interacting foundation model for molecular generation"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {file = "LICENSE"}
+authors = [
+    {name = "PocketXMol Team"},
+]
+maintainers = [
+    {name = "PocketXMol Team"},
+]
+keywords = [
+    "molecular-generation",
+    "drug-design",
+    "protein-pockets",
+    "diffusion-models",
+    "computational-biology",
+    "machine-learning",
+    "pytorch",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Scientific/Engineering :: Chemistry",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+]
+dependencies = [
+    # Core ML/Scientific packages
+    "torch>=2.0.0",
+    "pytorch-lightning",
+    "torch-geometric>=2.3.0",
+    "torch-scatter",
+    "torch-sparse",
+    "torch-cluster",
+    
+    # Scientific computing
+    "numpy>=1.24,<2.0",
+    "pandas>=1.5.2",
+    "scipy>=1.8.0",
+    "scikit-learn>=1.1.0",
+    "networkx>=2.8",
+    
+    # Chemistry/Biology
+    "rdkit>=2023.9.3",
+    "biopython>=1.83",
+    "peptidebuilder==1.1.0",
+    "openbabel-wheel",
+    
+    # Utilities
+    "easydict>=1.9",
+    "pyyaml>=5.4.1",
+    "tqdm>=4.64.0",
+    "lmdb>=1.2.1",
+    "tensorboard",
+    "seaborn>=0.12.1",
+    
+    # Additional dependencies
+    "meeko>=0.1.0",
+    "openmm>=7.0.0",
+    "pdbfixer>=1.8.1",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=6.0",
+    "black>=22.0",
+    "flake8>=4.0",
+    "isort>=5.0",
+    "mypy>=0.900",
+]
+notebook = [
+    "jupyter>=1.0",
+    "matplotlib>=3.5",
+    "ipywidgets>=7.6",
+]
+docs = [
+    "sphinx>=4.0",
+    "sphinx-rtd-theme>=1.0",
+    "sphinx-autodoc-typehints>=1.12",
+]
+
+[project.scripts]
+pxm-sample = "scripts.sample_use:main"
+pxm-sample-drug3d = "scripts.sample_drug3d:main"
+pxm-sample-pdb = "scripts.sample_pdb:main"
+pxm-train = "scripts.train_pl:main"
+pxm-believe = "scripts.believe:main"
+pxm-believe-use-pdb = "scripts.believe_use_pdb:main"
+pxm-rank-pose = "scripts.rank_pose:main"
+
+[project.urls]
+Homepage = "https://github.com/pengxingang/PocketXMol"
+Documentation = "https://github.com/pengxingang/PocketXMol#readme"
+Repository = "https://github.com/pengxingang/PocketXMol"
+"Bug Tracker" = "https://github.com/pengxingang/PocketXMol/issues"
+
+[tool.setuptools]
+zip-safe = false
+include-package-data = true
+
+[tool.setuptools.packages.find]
+include = ["models*", "utils*", "scripts*", "evaluate*", "process*"]
+
+[tool.setuptools.package-data]
+"*" = ["*.yml", "*.yaml", "*.pdb", "*.sdf", "*.md", "*.pkl", "*.pkl.gz"]
+utils = ["*.pkl.gz", "*.pkl"]
+
+[tool.black]
+line-length = 88
+target-version = ['py38']
+include = '\.pyi?$'
+extend-exclude = '''
+/(
+  # directories
+  \.eggs
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | build
+  | dist
+)/
+'''
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+include_trailing_comma = true
+force_grid_wrap = 0
+use_parentheses = true
+ensure_newline_before_comments = true
+line_length = 88
+
+[tool.mypy]
+python_version = "3.8"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true 
