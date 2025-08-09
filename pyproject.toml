@@ -107,16 +107,7 @@ Documentation = "https://github.com/pengxingang/PocketXMol#readme"
 Repository = "https://github.com/pengxingang/PocketXMol"
 "Bug Tracker" = "https://github.com/pengxingang/PocketXMol/issues"
 
-[tool.setuptools]
-zip-safe = false
-include-package-data = true
-
-[tool.setuptools.packages.find]
-include = ["models*", "utils*", "scripts*", "evaluate*", "process*"]
-
-[tool.setuptools.package-data]
-"*" = ["*.yml", "*.yaml", "*.pdb", "*.sdf", "*.md", "*.pkl", "*.pkl.gz"]
-utils = ["*.pkl.gz", "*.pkl"]
+# Package configuration is handled by setup.py
 
 [tool.black]
 line-length = 88
