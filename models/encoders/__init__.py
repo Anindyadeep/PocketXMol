@@ -6,7 +6,7 @@ This package contains encoder models and components.
 
 __version__ = "0.1.0"
 
-from .cftfm import CFTransformerEncoder, CFTransformerEncoderVN
+from pocketxmol.models.encoders.cftfm import CFTransformerEncoder, CFTransformerEncoderVN
 
 
 def get_encoder_vn(config, **kwargs):

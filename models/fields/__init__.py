@@ -6,7 +6,7 @@ This package contains field models and components.
 
 __version__ = "0.1.0"
 
-from .classifier import SpatialClassifierVN, SimpleEdgePredictor, FragmentPosDecoder
+from pocketxmol.models.fields.classifier import SpatialClassifierVN, SimpleEdgePredictor, FragmentPosDecoder
 
 
 def get_field_vn(config, num_classes, in_sca, in_vec, **kwargs):

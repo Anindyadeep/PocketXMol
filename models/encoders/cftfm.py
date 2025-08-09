@@ -6,8 +6,8 @@ from torch_geometric.nn import radius_graph, knn_graph
 from torch_scatter import scatter_sum, scatter_softmax
 from math import pi as PI
 
-from ..common import GaussianSmearing, ShiftedSoftplus, EdgeExpansion
-from ..invariant import GVLinear, GVPerceptronVN, VNLinear, VNLeakyReLU, MessageModule
+from pocketxmol.models.common import GaussianSmearing, ShiftedSoftplus, EdgeExpansion
+from pocketxmol.models.invariant import GVLinear, GVPerceptronVN, VNLinear, VNLeakyReLU, MessageModule
 # from utils.profile import lineprofile
 
 class AttentionInteractionBlock(Module):

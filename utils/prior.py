@@ -3,7 +3,7 @@ import torch
 import torch.nn as nn
 from torch.nn import functional as F
 from torch_scatter import scatter_mean
-from .motion import RobustAngleSO3Distribution, apply_axis_angle_rotation,\
+from pocketxmol.utils.motion import RobustAngleSO3Distribution, apply_axis_angle_rotation,\
         apply_torsional_rotation_multiple_domains, robust_sample_angle, sample_uniform_angle
 from pocketxmol.models.corrector import kabsch_flatten
 

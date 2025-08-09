@@ -15,7 +15,7 @@ sys.path.append('.')
 from pocketxmol.utils.dataset import LMDBDatabase
 from pocketxmol.utils.parser import parse_conf_list, PDBProtein
 from pocketxmol.utils.data import torchify_dict, PocketMolData
-from .utils_process import process_raw
+from pocketxmol.process.utils_process import process_raw
 
 
 def process(df, mols_dir, pro_dir, lmdb_path, kwargs):

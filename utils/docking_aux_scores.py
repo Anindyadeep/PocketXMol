@@ -4,7 +4,7 @@ import numpy as np
 from rdkit import Chem
 from rdkit.Chem import AllChem
 
-from .buster_tools import check_intermolecular_distance, check_identity
+from pocketxmol.utils.buster_tools import check_intermolecular_distance, check_identity
 
 
 def calc_clash(inputs, th=1):

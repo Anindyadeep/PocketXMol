@@ -9,9 +9,9 @@ import torch
 from torch.nn import functional as F
 from torch_geometric.nn.pool import radius
 
-from .diffusion import index_to_log_onehot
-from .transition import GeneralCategoricalTransition, ContigousTransition
-from .corrector import get_dihedral_batch
+from pocketxmol.models.diffusion import index_to_log_onehot
+from pocketxmol.models.transition import GeneralCategoricalTransition, ContigousTransition
+from pocketxmol.models.corrector import get_dihedral_batch
 
 LOSS_DICT = {}
 

@@ -9,19 +9,19 @@ from torch.nn import functional as F
 # from models.diffusion import extract
 # from models.egnn import EGNN, EGNNEncodeer
 # from models.transition import CategoricalTransition, ContigousTransition, GeneralCategoricalTransition
-from .graph import NodeEdgeNet
-from .graph_context import ContextNodeEdgeNet
-from .graph_gvp import ContextNodeEdgeNetGVP
-from .ipa import ContextGAEdgeNet, GAEncoder
+from pocketxmol.models.graph import NodeEdgeNet
+from pocketxmol.models.graph_context import ContextNodeEdgeNet
+from pocketxmol.models.graph_gvp import ContextNodeEdgeNetGVP
+from pocketxmol.models.ipa import ContextGAEdgeNet, GAEncoder
 
 # from .encoders import get_encoder_vn
 # from .fields import SimpleEdgePredictor, get_field_vn, FragmentPosDecoder
-from .common import *
-from .corrector import correct_pos, get_dihedral_batch
+from pocketxmol.models.common import *
+from pocketxmol.models.corrector import correct_pos, get_dihedral_batch
 # from .embedding import AtomEmbedding, BondEmbedding
 # from .position import PositionPredictor
 # from .sample_grid import get_grids
-from .diffusion import *
+from pocketxmol.models.diffusion import *
 # from .debug import check_true_bonds_len, check_pred_bonds_len
 # from utils.misc import unique
 

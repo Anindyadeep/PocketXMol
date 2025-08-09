@@ -1,7 +1,7 @@
 import torch
 from torch.nn import Module, Linear, Embedding, Sequential
 from torch.nn import functional as F
-from .invariant import GVPerceptronVN, GVLinear, VNLinear
+from pocketxmol.models.invariant import GVPerceptronVN, GVLinear, VNLinear
 import math
 from torch.distributions.categorical import Categorical
 

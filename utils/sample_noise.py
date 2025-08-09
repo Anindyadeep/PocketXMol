@@ -16,10 +16,10 @@ from torch_geometric.nn import radius
 # from models.transition import ContigousTransition, GeneralCategoricalTransition
 from pocketxmol.models.diffusion import *
 from pocketxmol.models.corrector import correct_pos_batch, kabsch_flatten, correct_pos_batch_no_tor, grad_len_to_pos, correct_pos_by_fixed_dist_batch
-from .data import Mol3DData
-from .prior import MolPrior
-from .info_level import MolInfoLevel
-from .shape import get_points_from_letter
+from pocketxmol.utils.data import Mol3DData
+from pocketxmol.utils.prior import MolPrior
+from pocketxmol.utils.info_level import MolInfoLevel
+from pocketxmol.utils.shape import get_points_from_letter
 
 SAMPLE_NOISE_DICT = {}
 def register_sample_noise(name):

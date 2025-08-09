@@ -16,10 +16,10 @@ from torch_geometric.transforms import Compose  # imported by train.py
 
 from pocketxmol.models.transition import *
 
-from .train_noise import get_vector, get_vector_list, combine_vectors_indexed
-from .data import Mol3DData, PocketMolData
-from .dataset import *
-from .misc import *
+from pocketxmol.utils.train_noise import get_vector, get_vector_list, combine_vectors_indexed
+from pocketxmol.utils.data import Mol3DData, PocketMolData
+from pocketxmol.utils.dataset import *
+from pocketxmol.utils.misc import *
 from pocketxmol.process.utils_process import process_raw
 # from utils.train import inf_iterator
 # from utils.protein_ligand import ATOM_FAMILIES

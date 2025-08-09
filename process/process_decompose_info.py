@@ -10,8 +10,8 @@ sys.path.append('.')
 from pocketxmol.utils.dataset import LMDBDatabase
 from pocketxmol.utils.fragment import get_delinker_decom, get_difflinker_decom
 from pocketxmol.utils.graph_decom import decompose_mmpa, decompose_brics
-from .process_torsional_info import get_mol_from_data, get_db_config
-from .unmi.process_mols import get_unmi_raw_db
+from pocketxmol.process.process_torsional_info import get_mol_from_data, get_db_config
+from pocketxmol.process.unmi.process_mols import get_unmi_raw_db
 
 
 def get_decompose_info(df, mol_path, save_path, mols_dir, decom_list):

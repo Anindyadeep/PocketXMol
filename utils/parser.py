@@ -3,7 +3,7 @@ import numpy as np
 from rdkit import Chem
 from Bio.PDB import PDBParser
 from Bio.SeqUtils import seq1
-from .fragment import find_rotatable_bond_mat
+from pocketxmol.utils.fragment import find_rotatable_bond_mat
 # from rdkit.Chem.rdchem import BondType
 # from rdkit.Chem import ChemicalFeatures
 # from rdkit import RDConfig

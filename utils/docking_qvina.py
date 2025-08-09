@@ -7,7 +7,7 @@ from easydict import EasyDict
 from rdkit import Chem
 from rdkit.Chem.rdForceFieldHelpers import UFFOptimizeMolecule
 from rdkit.Chem import AllChem
-from .reconstruct import reconstruct_from_generated, reconstruct_from_generated_with_edges
+from pocketxmol.utils.reconstruct import reconstruct_from_generated, reconstruct_from_generated_with_edges
 from rdkit.Chem.rdMolAlign import CalcRMS
 import numpy as np
 

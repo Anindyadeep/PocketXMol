@@ -8,9 +8,9 @@ from torch_scatter import scatter_add, scatter_softmax, scatter_sum
 from math import pi as PI
 
 
-from ..common import ShiftedSoftplus, GaussianSmearing, EdgeExpansion, MLP
-from ..invariant import GVLinear, GVPerceptronVN, MessageModule
-from ..position import SingleAtomPredictor
+from pocketxmol.models.common import ShiftedSoftplus, GaussianSmearing, EdgeExpansion, MLP
+from pocketxmol.models.invariant import GVLinear, GVPerceptronVN, MessageModule
+from pocketxmol.models.position import SingleAtomPredictor
 # from utils.profile import lineprofile
 
 class SpatialClassifierVN(Module):

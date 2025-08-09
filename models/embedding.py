@@ -1,7 +1,7 @@
 import torch
 from torch.nn import Module, Linear, Embedding
 from torch.nn import functional as F
-from .common import GaussianSmearing, MLP, NONLINEARITIES
+from pocketxmol.models.common import GaussianSmearing, MLP, NONLINEARITIES
 
 
 class ContinuousEmbedding(Module):

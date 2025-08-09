@@ -11,12 +11,7 @@ from torch.distributed import get_rank, get_world_size
 
 from torch.utils.data import Dataset, Sampler, IterableDataset
 from torch_geometric.data import Batch
-try:
-    from .train import shuffled_cyclic_iterator
-except:
-    import sys
-    sys.path.append('.')
-    from utils.train import shuffled_cyclic_iterator
+from pocketxmol.utils.train import shuffled_cyclic_iterator
 
 LMDB_CONFIGS = {  # seems not used
     'geom': ['mols', 'torsion', 'decom'],

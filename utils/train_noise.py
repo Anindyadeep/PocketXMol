@@ -13,9 +13,9 @@ from torch_geometric.utils import subgraph, bipartite_subgraph, to_undirected
 # from models.transition import ContigousTransition, GeneralCategoricalTransition
 from pocketxmol.models.diffusion import *
 
-from .data import Mol3DData
-from .prior import get_prior, MolPrior
-from .info_level import IndividualInfoLevel, get_level, WholeInfoLevel, MolInfoLevel
+from pocketxmol.utils.data import Mol3DData
+from pocketxmol.utils.prior import get_prior, MolPrior
+from pocketxmol.utils.info_level import IndividualInfoLevel, get_level, WholeInfoLevel, MolInfoLevel
 
 
 def get_vector(shape, value, dtype=torch.long):

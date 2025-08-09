@@ -6,7 +6,7 @@ import numpy as np
 from torch_scatter import scatter_softmax, scatter_sum, scatter_mean
 from torch_geometric.nn import knn
 
-from .common import MLP, GaussianSmearing
+from pocketxmol.models.common import MLP, GaussianSmearing
 from pocketxmol.utils.motion import quat_1ijk_to_mat
 
 

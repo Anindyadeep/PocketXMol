@@ -5,7 +5,7 @@ import torch
 import torch.nn as nn
 from torch_geometric.data import Batch, Data
 
-from .warmup import GradualWarmupScheduler, GradualWarmupConstantScheduler
+from pocketxmol.utils.warmup import GradualWarmupScheduler, GradualWarmupConstantScheduler
 
 
 #customize exp lr scheduler with min lr

@@ -3,7 +3,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 import numpy as np
 
-from .diffusion import categorical_kl, extract, index_to_log_onehot, log_1_min_a, log_add_exp, log_categorical, log_sample_categorical, to_torch_const
+from pocketxmol.models.diffusion import categorical_kl, extract, index_to_log_onehot, log_1_min_a, log_add_exp, log_categorical, log_sample_categorical, to_torch_const
 
 
 class ContigousTransition(nn.Module):

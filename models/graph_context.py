@@ -5,7 +5,7 @@ import torch.nn.functional as F
 from torch.nn import Module, Sequential, Linear, Conv1d, ModuleList
 from torch_scatter import scatter_mean, scatter_sum, scatter_softmax
 from torch_geometric.nn import radius_graph, knn_graph, knn, radius
-from .common import GaussianSmearing, MLP, NONLINEARITIES
+from pocketxmol.models.common import GaussianSmearing, MLP, NONLINEARITIES
 from pocketxmol.utils.motion import apply_axis_angle_rotation, apply_torsional_rotation_multiple_domains
 from pocketxmol.utils.data import edge_index_to_index_of_edge
 
