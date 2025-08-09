@@ -9,7 +9,7 @@ from rdkit.Chem import rdMMPA
 from rdkit.Chem.BRICS import FindBRICSBonds
 from rdkit.Chem.Lipinski import RotatableBondSmarts
 
-from utils.difflinker_decom import fragment_by_brics
+from .difflinker_decom import fragment_by_brics
 
 
 

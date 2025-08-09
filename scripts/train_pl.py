@@ -22,13 +22,13 @@ from torch_geometric.loader import DataLoader
 torch.set_float32_matmul_precision('medium')
 
 sys.path.append('.')
-from models.maskfill import PMAsymDenoiser
-from models.loss import get_loss_func
-from utils.dataset import ForeverTaskDataset
-from utils.transforms import FeaturizeMol, Compose, get_transforms, FeaturizePocket
-from utils.misc import *
-from utils.train import get_optimizer, get_scheduler, GradualWarmupScheduler
-from utils.sample_noise import get_sample_noiser
+from pocketxmol.models.maskfill import PMAsymDenoiser
+from pocketxmol.models.loss import get_loss_func
+from pocketxmol.utils.dataset import ForeverTaskDataset
+from pocketxmol.utils.transforms import FeaturizeMol, Compose, get_transforms, FeaturizePocket
+from pocketxmol.utils.misc import *
+from pocketxmol.utils.train import get_optimizer, get_scheduler, GradualWarmupScheduler
+from pocketxmol.utils.sample_noise import get_sample_noiser
 
 
 def copy_py_files(src_dir, dst_dir, base=False):

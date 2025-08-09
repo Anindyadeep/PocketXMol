@@ -4,7 +4,7 @@ import random
 import torch
 from tqdm.auto import tqdm
 
-from utils.datasets import PocketLigandPairDataset, Subset
+from pocketxmol.utils.datasets import PocketLigandPairDataset, Subset
 
 
 def get_chain_name(fn):

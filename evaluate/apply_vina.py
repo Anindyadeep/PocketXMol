@@ -16,7 +16,7 @@ from rdkit import Chem
 import sys
 sys.path.append('.')
 
-from utils.docking_vina import VinaDockingTask
+from pocketxmol.utils.docking_vina import VinaDockingTask
 
 
 def get_dir_from_prefix(result_root, exp_name):

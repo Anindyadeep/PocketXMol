@@ -15,8 +15,8 @@ from posebusters import PoseBusters
 
 import sys
 sys.path.append('.')
-from evaluate.evaluate_mols import get_dir_from_prefix
-from utils.scoring_func import get_diversity
+from .evaluate_mols import get_dir_from_prefix
+from pocketxmol.utils.scoring_func import get_diversity
 
 
 

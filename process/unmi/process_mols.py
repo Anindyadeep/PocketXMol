@@ -12,11 +12,11 @@ from rdkit import Chem
 import pickle
 
 sys.path.append('.')
-from utils.dataset import LMDBDatabase
-from utils.parser import parse_mol_with_confs
-from utils.data import Mol3DData, torchify_dict
+from pocketxmol.utils.dataset import LMDBDatabase
+from pocketxmol.utils.parser import parse_mol_with_confs
+from pocketxmol.utils.data import Mol3DData, torchify_dict
 
-from process.unmi.preprocess_db import unmi_data_to_rdmol
+from .unmi.preprocess_db import unmi_data_to_rdmol
 
 
 def get_unmi_raw_db():

@@ -6,7 +6,7 @@ from multiprocessing import Pool
 
 import sys
 sys.path.append('.')
-from utils.scoring_func import get_chem
+from pocketxmol.utils.scoring_func import get_chem
 
 
 ELEMENT_LIST = ['C', 'N', 'O', 'F', 'P', 'S', 'Cl',

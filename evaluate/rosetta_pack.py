@@ -18,7 +18,7 @@ from distrun.api.joblib import Parallel as d_Parallel
 from distrun.api.joblib import delayed as d_delayed
 from joblib import Parallel, delayed
 
-from evaluate.rosetta import fixbb_repack
+from .rosetta import fixbb_repack
 
 import gzip
 import warnings

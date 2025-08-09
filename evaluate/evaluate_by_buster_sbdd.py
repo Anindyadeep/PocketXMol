@@ -15,7 +15,7 @@ from posebusters import PoseBusters
 
 import sys
 sys.path.append('.')
-from evaluate.evaluate_mols import get_dir_from_prefix
+from .evaluate_mols import get_dir_from_prefix
 
 
 

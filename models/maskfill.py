@@ -9,10 +9,10 @@ from torch.nn import functional as F
 # from models.diffusion import extract
 # from models.egnn import EGNN, EGNNEncodeer
 # from models.transition import CategoricalTransition, ContigousTransition, GeneralCategoricalTransition
-from models.graph import NodeEdgeNet
-from models.graph_context import ContextNodeEdgeNet
-from models.graph_gvp import ContextNodeEdgeNetGVP
-from models.ipa import ContextGAEdgeNet, GAEncoder
+from .graph import NodeEdgeNet
+from .graph_context import ContextNodeEdgeNet
+from .graph_gvp import ContextNodeEdgeNetGVP
+from .ipa import ContextGAEdgeNet, GAEncoder
 
 # from .encoders import get_encoder_vn
 # from .fields import SimpleEdgePredictor, get_field_vn, FragmentPosDecoder

@@ -9,7 +9,7 @@ from tqdm.auto import tqdm
 from functools import partial
 import sys
 sys.path.append('.')
-from utils.parser import PDBProtein
+from pocketxmol.utils.parser import PDBProtein
 # from utils.visualize import *
 
 

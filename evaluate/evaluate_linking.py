@@ -14,13 +14,13 @@ from multiprocessing import Pool
 from copy import deepcopy
 # from utils.reconstruct import *
 # from utils.graph import rdmol_to_attr_graph, is_same_mols
-from utils.scoring_func import get_diversity
-from utils.evaluation import get_drug_chem
+from pocketxmol.utils.scoring_func import get_diversity
+from pocketxmol.utils.evaluation import get_drug_chem
 # from utils.dataset import TestTaskDataset
-from process.process_torsional_info import get_mol_from_data
-from evaluate.evaluate_mols import get_dir_from_prefix
+from pocketxmol.process.process_torsional_info import get_mol_from_data
+from .evaluate_mols import get_dir_from_prefix
 #                         get_dir_from_prefix, combine_gt_gen_metrics
-from evaluate.from_delinker import calc_SC_RDKit_score
+from .from_delinker import calc_SC_RDKit_score
 
 
 

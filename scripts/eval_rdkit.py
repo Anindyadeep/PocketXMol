@@ -16,9 +16,9 @@ from rdkit import Chem
 # from rdkit.Chem.QED import qed
 from easydict import EasyDict
 
-from utils.datasets import *
-from utils.baseline import *
-from utils.scoring_func import get_rdkit_rmsd
+from pocketxmol.utils.datasets import *
+from pocketxmol.utils.baseline import *
+from pocketxmol.utils.scoring_func import get_rdkit_rmsd
 # from utils.transforms import LigandRandomMask
 
 

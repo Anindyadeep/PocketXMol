@@ -12,9 +12,9 @@ import pandas as pd
 # from Bio.PDB import Selection
 from tqdm import tqdm
 
-from evaluate.foldx.FoldX import FoldXSession
-from evaluate.rosetta import ParsePDB, PrintPDB
-from evaluate.evaluate_mols import get_dir_from_prefix
+from .foldx.FoldX import FoldXSession
+from .rosetta import ParsePDB, PrintPDB
+from .evaluate_mols import get_dir_from_prefix
 
 # from evaluate.energy.foldx_repair import repair_one_file
 # from evaluate.energy.foldx_stability import stability_one_file

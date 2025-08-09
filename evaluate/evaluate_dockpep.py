@@ -14,8 +14,8 @@ from timeout_decorator import timeout
 
 import sys
 sys.path.append('.')
-from evaluate.evaluate_mols import get_dir_from_prefix
-from evaluate.utils_eval import get_dockq
+from .evaluate_mols import get_dir_from_prefix
+from .utils_eval import get_dockq
 
 
 @timeout(20)

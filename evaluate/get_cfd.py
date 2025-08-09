@@ -8,7 +8,7 @@ import torch
 
 import sys
 sys.path.append('.')
-from evaluate.evaluate_mols import get_dir_from_prefix
+from .evaluate_mols import get_dir_from_prefix
 
 
 def add_cfd_to_csv(gen_dir, sort):

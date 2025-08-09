@@ -8,13 +8,13 @@ sys.path.append('.')
 
 from posebusters import PoseBusters
 
-from utils.reconstruct import *
-from utils.misc import *
-from utils.scoring_func import *
-from utils.evaluation import *
-from utils.dataset import TestTaskDataset
-from process.process_torsional_info import get_mol_from_data
-from evaluate.evaluate_mols import evaluate_mol_dict, get_mols_dict_from_gen_path,\
+from pocketxmol.utils.reconstruct import *
+from pocketxmol.utils.misc import *
+from pocketxmol.utils.scoring_func import *
+from pocketxmol.utils.evaluation import *
+from pocketxmol.utils.dataset import TestTaskDataset
+from pocketxmol.process.process_torsional_info import get_mol_from_data
+from .evaluate_mols import evaluate_mol_dict, get_mols_dict_from_gen_path,\
                         get_dir_from_prefix, combine_gt_gen_metrics
 
 

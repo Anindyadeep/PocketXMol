@@ -14,13 +14,13 @@ from torch_geometric.nn.pool import knn_graph
 from torch_geometric.utils import subgraph, bipartite_subgraph, to_undirected, sort_edge_index
 from torch_geometric.transforms import Compose  # imported by train.py
 
-from models.transition import *
+from pocketxmol.models.transition import *
 
-from utils.train_noise import get_vector, get_vector_list, combine_vectors_indexed
-from utils.data import Mol3DData, PocketMolData
-from utils.dataset import *
-from utils.misc import *
-from process.utils_process import process_raw
+from .train_noise import get_vector, get_vector_list, combine_vectors_indexed
+from .data import Mol3DData, PocketMolData
+from .dataset import *
+from .misc import *
+from pocketxmol.process.utils_process import process_raw
 # from utils.train import inf_iterator
 # from utils.protein_ligand import ATOM_FAMILIES
 # from utils.reconstruct import reconstruct_from_generated_with_edges

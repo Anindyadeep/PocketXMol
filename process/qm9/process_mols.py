@@ -11,9 +11,9 @@ from rdkit import Chem
 import pickle
 
 sys.path.append('.')
-from utils.dataset import LMDBDatabase
-from utils.parser import parse_conf_list
-from utils.data import Mol3DData, torchify_dict
+from pocketxmol.utils.dataset import LMDBDatabase
+from pocketxmol.utils.parser import parse_conf_list
+from pocketxmol.utils.data import Mol3DData, torchify_dict
 
 
 def process(df, mols_dir, lmdb_path):

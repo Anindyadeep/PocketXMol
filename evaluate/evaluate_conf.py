@@ -14,7 +14,7 @@ import re
 import json
 import sys
 sys.path.append('.')
-from evaluate.evaluate_mols import get_dir_from_prefix
+from .evaluate_mols import get_dir_from_prefix
 
 def load_gt(data_path):
     data = pd.read_pickle(data_path)

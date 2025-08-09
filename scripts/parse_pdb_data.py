@@ -5,12 +5,12 @@ import argparse
 import pickle
 import sys
 sys.path.append('.')
-from utils.data import ProteinLigandData
-from utils.parser import *
-from utils.visualize import *
-from utils.data import torchify_dict
-from utils.misc import load_config
-from utils.align_structures import align_protein_ligand_pairs
+from pocketxmol.utils.data import ProteinLigandData
+from pocketxmol.utils.parser import *
+from pocketxmol.utils.visualize import *
+from pocketxmol.utils.data import torchify_dict
+from pocketxmol.utils.misc import load_config
+from pocketxmol.utils.align_structures import align_protein_ligand_pairs
 
 
 def load_item(item, path):

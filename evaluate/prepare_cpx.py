@@ -6,8 +6,8 @@ import argparse
 
 import sys
 sys.path.append('.')
-from evaluate.utils_eval import combine_receptor_ligand, combine_chains
-from evaluate.evaluate_mols import get_dir_from_prefix
+from .utils_eval import combine_receptor_ligand, combine_chains
+from .evaluate_mols import get_dir_from_prefix
 
 
 if __name__ == '__main__':

@@ -16,7 +16,7 @@ from multiprocessing import Pool
 
 # import sys
 # sys.path.append('.')
-from process.make_mol_meta import make_one_meta
+from .make_mol_meta import make_one_meta
 
 
 def unmi_data_to_rdmol(data, add_confs=True):

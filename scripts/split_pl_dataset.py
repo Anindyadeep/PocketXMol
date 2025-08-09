@@ -4,7 +4,7 @@ import random
 import torch
 from tqdm.auto import tqdm
 
-from utils.datasets import PocketLigandPairDataset
+from pocketxmol.utils.datasets import PocketLigandPairDataset
 
 
 if __name__ == '__main__':

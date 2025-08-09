@@ -22,10 +22,10 @@ import PeptideBuilder
 
 sys.path.append('.')
 # from utils.dataset import LMDBDatabase
-from utils.parser import parse_conf_list, PDBProtein, parse_pdb_peptide
-from utils.data import torchify_dict, PocketMolData, Mol3DData
-from process.process_torsional_info import get_torsional_info_mol
-from process.process_decompose_info import decompose_brics, decompose_mmpa
+from pocketxmol.utils.parser import parse_conf_list, PDBProtein, parse_pdb_peptide
+from pocketxmol.utils.data import torchify_dict, PocketMolData, Mol3DData
+from .process_torsional_info import get_torsional_info_mol
+from .process_decompose_info import decompose_brics, decompose_mmpa
 
 
 def get_pdb_angles(stru, select_chain=None, angle_list=None, max_peptide_bond=None):

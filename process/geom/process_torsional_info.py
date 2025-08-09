@@ -9,8 +9,8 @@ import networkx as nx
 
 import sys
 sys.path.append('.')
-from utils.dataset import LMDBDatabase
-from utils.fragment import find_rotatable_bond_mat
+from pocketxmol.utils.dataset import LMDBDatabase
+from pocketxmol.utils.fragment import find_rotatable_bond_mat
 
 def get_torsional_info(df, mol_path, save_path, mols_dir):
     mol_lmdb = LMDBDatabase(mol_path, readonly=True)

@@ -16,18 +16,18 @@ from Bio.PDB.DSSP import DSSP
 from rdkit.Chem.rdMolAlign import CalcRMS
 from rdkit import Chem
 
-from utils.reconstruct import *
-from utils.misc import *
-from utils.scoring_func import *
-from utils.evaluation import *
-from utils.dataset import TestTaskDataset
-from utils.docking_vina import VinaDockingTask
-from process.process_torsional_info import get_mol_from_data
-from evaluate.evaluate_mols import evaluate_mol_dict, get_mols_dict_from_gen_path,\
+from pocketxmol.utils.reconstruct import *
+from pocketxmol.utils.misc import *
+from pocketxmol.utils.scoring_func import *
+from pocketxmol.utils.evaluation import *
+from pocketxmol.utils.dataset import TestTaskDataset
+from pocketxmol.utils.docking_vina import VinaDockingTask
+from pocketxmol.process.process_torsional_info import get_mol_from_data
+from .evaluate_mols import evaluate_mol_dict, get_mols_dict_from_gen_path,\
                         get_dir_from_prefix, combine_gt_gen_metrics
-from evaluate.utils_eval import combine_receptor_ligand, combine_chains
-from evaluate.rosetta import pep_score
-from process.utils_process import get_pdb_angles
+from .utils_eval import combine_receptor_ligand, combine_chains
+from .rosetta import pep_score
+from pocketxmol.process.utils_process import get_pdb_angles
 
 
 

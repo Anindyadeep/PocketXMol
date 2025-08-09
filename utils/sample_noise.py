@@ -14,12 +14,12 @@ from torch_geometric.nn import radius
 # from torch.nn import Module
 # from torch.nn import functional as F
 # from models.transition import ContigousTransition, GeneralCategoricalTransition
-from models.diffusion import *
-from models.corrector import correct_pos_batch, kabsch_flatten, correct_pos_batch_no_tor, grad_len_to_pos, correct_pos_by_fixed_dist_batch
-from utils.data import Mol3DData
-from utils.prior import MolPrior
-from utils.info_level import MolInfoLevel
-from utils.shape import get_points_from_letter
+from pocketxmol.models.diffusion import *
+from pocketxmol.models.corrector import correct_pos_batch, kabsch_flatten, correct_pos_batch_no_tor, grad_len_to_pos, correct_pos_by_fixed_dist_batch
+from .data import Mol3DData
+from .prior import MolPrior
+from .info_level import MolInfoLevel
+from .shape import get_points_from_letter
 
 SAMPLE_NOISE_DICT = {}
 def register_sample_noise(name):

@@ -17,8 +17,8 @@ from scipy.spatial.distance import squareform
 # from .edm_bond import predict_bonds
 # from torch.jit import Error
 
-from process.process_torsional_info import get_mol_from_data
-from utils.misc import time_limit, TimeoutException
+from pocketxmol.process.process_torsional_info import get_mol_from_data
+from .misc import time_limit, TimeoutException
 # from .protein_ligand import ATOM_FAMILIES_ID
 
 

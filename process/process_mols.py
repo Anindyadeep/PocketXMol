@@ -12,10 +12,10 @@ from rdkit import Chem
 import pickle
 
 sys.path.append('.')
-from utils.dataset import LMDBDatabase
-from utils.parser import parse_conf_list, PDBProtein
-from utils.data import torchify_dict, PocketMolData
-from process.utils_process import process_raw
+from pocketxmol.utils.dataset import LMDBDatabase
+from pocketxmol.utils.parser import parse_conf_list, PDBProtein
+from pocketxmol.utils.data import torchify_dict, PocketMolData
+from .utils_process import process_raw
 
 def process(df, mols_dir, lmdb_path, modes):
     db = LMDBDatabase(lmdb_path, readonly=False)

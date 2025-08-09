@@ -15,13 +15,13 @@ from torch_geometric.loader import DataLoader
 from Bio.SeqUtils import seq1
 from Bio import PDB
 
-from scripts.train_pl import DataModule
-from models.maskfill import PMAsymDenoiser
-from models.sample import seperate_outputs2, sample_loop3, get_cfd_traj
-from utils.transforms import *
-from utils.misc import *
-from utils.reconstruct import *
-from utils.sample_noise import get_sample_noiser
+from .train_pl import DataModule
+from pocketxmol.models.maskfill import PMAsymDenoiser
+from pocketxmol.models.sample import seperate_outputs2, sample_loop3, get_cfd_traj
+from pocketxmol.utils.transforms import *
+from pocketxmol.utils.misc import *
+from pocketxmol.utils.reconstruct import *
+from pocketxmol.utils.sample_noise import get_sample_noiser
 
 def print_pool_status(pool, logger):
     logger.info('[Pool] Succ/Nonstd/Incomp/Bad: %d/%d/%d/%d' % (

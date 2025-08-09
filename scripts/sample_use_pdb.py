@@ -21,16 +21,16 @@ from Bio.SeqUtils import seq1
 from Bio import PDB
 
 
-from scripts.train_pl import DataModule
-from models.maskfill import PMAsymDenoiser
-from models.sample import seperate_outputs2, sample_loop3
-from utils.transforms import *
-from utils.misc import *
-from utils.reconstruct import *
-from utils.dataset import UseDataset
-from utils.sample_noise import get_sample_noiser
-from process.utils_process import extract_pocket, get_pocmol_data, add_pep_bb_data, get_peptide_info, get_input_from_file
-from utils.parser import parse_conf_list, PDBProtein
+from .train_pl import DataModule
+from pocketxmol.models.maskfill import PMAsymDenoiser
+from pocketxmol.models.sample import seperate_outputs2, sample_loop3
+from pocketxmol.utils.transforms import *
+from pocketxmol.utils.misc import *
+from pocketxmol.utils.reconstruct import *
+from pocketxmol.utils.dataset import UseDataset
+from pocketxmol.utils.sample_noise import get_sample_noiser
+from pocketxmol.process.utils_process import extract_pocket, get_pocmol_data, add_pep_bb_data, get_peptide_info, get_input_from_file
+from pocketxmol.utils.parser import parse_conf_list, PDBProtein
 torch.backends.cudnn.benchmark = False
 
 def print_pool_status(pool, logger):

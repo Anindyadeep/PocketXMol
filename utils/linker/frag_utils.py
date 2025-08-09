@@ -29,7 +29,7 @@ from itertools import chain, product
 # from joblib import Parallel, delayed
 
 from utils import sascorer
-from utils.linker import calc_SC_RDKit
+from .linker import calc_SC_RDKit
 
 ### Dataset info #####
 def dataset_info(dataset): #qm9, zinc, cep

@@ -14,9 +14,9 @@ import torch
 
 import sys
 sys.path.append('.')
-from evaluate.evaluate_mols import get_dir_from_prefix
-from utils.misc import make_config
-from utils.docking_aux_scores import calc_clash, prepare_inputs
+from pocketxmol.evaluate.evaluate_mols import get_dir_from_prefix
+from pocketxmol.utils.misc import make_config
+from pocketxmol.utils.docking_aux_scores import calc_clash, prepare_inputs
 
 
 def make_ranking_score(gen_path):

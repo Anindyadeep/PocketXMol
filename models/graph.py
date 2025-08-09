@@ -4,8 +4,8 @@ import torch.nn.functional as F
 from torch.nn import Module, Sequential, Linear, Conv1d, ModuleList
 from torch_scatter import scatter_mean, scatter_sum, scatter_softmax
 from torch_geometric.nn import radius_graph, knn_graph
-from models.common import GaussianSmearing, MLP, NONLINEARITIES
-from utils.motion import apply_axis_angle_rotation, apply_torsional_rotation_multiple_domains
+from .common import GaussianSmearing, MLP, NONLINEARITIES
+from pocketxmol.utils.motion import apply_axis_angle_rotation, apply_torsional_rotation_multiple_domains
 
 class NodeBlock(Module):
 

@@ -7,10 +7,10 @@ import pickle
 from tqdm.auto import tqdm
 sys.path.append('.')
 
-from utils.reconstruct import *
-from utils.misc import *
-from utils.scoring_func import *
-from utils.evaluation import *
+from pocketxmol.utils.reconstruct import *
+from pocketxmol.utils.misc import *
+from pocketxmol.utils.scoring_func import *
+from pocketxmol.utils.evaluation import *
 from easydict import EasyDict
 from rdkit import RDLogger
 RDLogger.DisableLog('rdApp.*') 

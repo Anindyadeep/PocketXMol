@@ -11,11 +11,11 @@ from torch_geometric.utils import subgraph, bipartite_subgraph, to_undirected
 # from torch.nn import Module
 # from torch.nn import functional as F
 # from models.transition import ContigousTransition, GeneralCategoricalTransition
-from models.diffusion import *
+from pocketxmol.models.diffusion import *
 
-from utils.data import Mol3DData
-from utils.prior import get_prior, MolPrior
-from utils.info_level import IndividualInfoLevel, get_level, WholeInfoLevel, MolInfoLevel
+from .data import Mol3DData
+from .prior import get_prior, MolPrior
+from .info_level import IndividualInfoLevel, get_level, WholeInfoLevel, MolInfoLevel
 
 
 def get_vector(shape, value, dtype=torch.long):

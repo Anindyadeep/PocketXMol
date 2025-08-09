@@ -10,9 +10,9 @@ import torch
 import pickle
 
 sys.path.append('.')
-from utils.dataset import LMDBDatabase
-from utils.parser import parse_conf_list, PDBProtein, parse_pdb_peptide
-from utils.data import torchify_dict, PocketMolData
+from pocketxmol.utils.dataset import LMDBDatabase
+from pocketxmol.utils.parser import parse_conf_list, PDBProtein, parse_pdb_peptide
+from pocketxmol.utils.data import torchify_dict, PocketMolData
 # from process.utils_process import process_peptide
 
 

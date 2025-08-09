@@ -2,7 +2,7 @@ import pandas as pd
 import os
 import sys
 sys.path.append('.')
-from utils.dataset import LMDBDatabase
+from pocketxmol.utils.dataset import LMDBDatabase
 
 
 def df_to_lmdb_table(df):

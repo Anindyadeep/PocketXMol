@@ -17,7 +17,7 @@ import os
 import contextlib
 
 # from utils.reconstruct import reconstruct_from_generated
-from utils.docking_qvina import get_random_id, BaseDockingTask
+from .docking_qvina import get_random_id, BaseDockingTask
 
 
 def supress_stdout(func):

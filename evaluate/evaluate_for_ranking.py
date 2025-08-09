@@ -15,9 +15,9 @@ from rdkit.Chem import AllChem
 
 import sys
 sys.path.append('.')
-from evaluate.evaluate_mols import get_dir_from_prefix
-from utils.buster_tools import check_intermolecular_distance, check_identity
-from utils.misc import make_config
+from .evaluate_mols import get_dir_from_prefix
+from pocketxmol.utils.buster_tools import check_intermolecular_distance, check_identity
+from pocketxmol.utils.misc import make_config
 
 
 def calc_clash(inputs, th=1):

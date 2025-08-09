@@ -11,8 +11,8 @@ import torch
 
 import sys
 sys.path.append('.')
-from utils.fragment import find_rotatable_bond_mat
-from process.unmi.process_mols import get_unmi_raw_db, unmi_data_to_rdmol
+from pocketxmol.utils.fragment import find_rotatable_bond_mat
+from .unmi.process_mols import get_unmi_raw_db, unmi_data_to_rdmol
 
 
 def get_mol_from_data(data_dict, mols_dir=None, train_txn=None, val_txn=None, root_dir=None):
