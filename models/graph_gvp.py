@@ -4,12 +4,7 @@ import torch.nn.functional as F
 from torch.nn import Module, Sequential, Linear, Conv1d, ModuleList
 from torch_scatter import scatter_sum, scatter_softmax
 from torch_geometric.nn import knn
-try:
-    from models.common import GaussianSmearing, MLP, NONLINEARITIES
-except:
-    import sys
-    sys.path.append('.')
-    from models.common import GaussianSmearing, MLP, NONLINEARITIES
+from .common import GaussianSmearing, MLP, NONLINEARITIES
 
 
 class GVP(nn.Module):
