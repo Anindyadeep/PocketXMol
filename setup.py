@@ -55,21 +55,11 @@ setup(
     long_description=read_readme(),
     long_description_content_type="text/markdown",
     url="https://github.com/pengxingang/PocketXMol",
-    packages=find_packages(include=[
-        "models",
-        "models.*",
-        "utils", 
-        "utils.*",
-        "scripts",
-        "scripts.*",
-        "evaluate",
-        "evaluate.*", 
-        "process",
-        "process.*"
-    ]),
+    packages=["pocketxmol"] + ["pocketxmol." + p for p in find_packages()],
+    package_dir={"pocketxmol": "."},
     package_data={
-        "utils": ["*.pkl.gz", "*.pkl"],
-        "": ["*.yml", "*.yaml", "*.pdb", "*.sdf", "*.md"],
+        "pocketxmol.utils": ["*.pkl.gz", "*.pkl"],
+        "pocketxmol": ["*.yml", "*.yaml", "*.pdb", "*.sdf", "*.md"],
     },
     include_package_data=True,
     classifiers=[

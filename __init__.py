@@ -13,23 +13,5 @@ considers protein pocket interactions. It supports various tasks including:
 
 __version__ = "0.1.0"
 __author__ = "PocketXMol Team"
-__email__ = ""
+__email__ = "" 
 
-# Import main modules
-try:
-    from . import models
-    from . import utils
-    from . import scripts
-    from . import evaluate
-    from . import process
-except ImportError:
-    # Handle import errors gracefully during package installation
-    pass
-
-__all__ = [
-    "models",
-    "utils", 
-    "scripts",
-    "evaluate",
-    "process",
-] 
