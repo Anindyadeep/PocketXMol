@@ -2,6 +2,16 @@
 
 A modular, Pydantic-based Python interface for the PocketXMol molecular generation foundation model. This server provides a clean programmatic API that replaces CLI-based workflows with type-safe, validated configuration objects.
 
+## Install
+
+```
+pip install git+https://github.com/Anindyadeep/PocketXMol.git@install --find-links https://data.pyg.org/whl/torch-2.6.0+cu126.html
+
+gdown 1Hu6qTkCyNUPPsQLLHL1kBFiwRbKUOFLs
+tar -zxf model_weights.tar.gz && rm model_weights.tar.gz
+
+```
+
 ## 🚀 Quick Start
 
 ```python
