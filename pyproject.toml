@@ -40,7 +40,8 @@ classifiers = [
 ]
 dependencies = [
     # Core ML/Scientific packages
-    "torch>=2.0.0",
+    # Pin torch to 2.6.x for compatibility with prebuilt torch-scatter/sparse/cluster wheels
+    "torch>=2.6.0,<2.7.0",
     "pytorch-lightning",
     "torch-geometric>=2.3.0",
     "torch-scatter",
