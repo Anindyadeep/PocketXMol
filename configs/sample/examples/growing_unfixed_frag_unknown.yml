@@ -29,7 +29,7 @@ transforms:
     not_remove: [0, 1, 2, 3, 4, 5, 6]  # set this the same as init_frag so that these atoms will not be removed
 
 
-# The following is for fragment growing with fixed fragment position
+# The following is for fragment growing with unfixed fragment position
 
 task:
   name: maskfill
@@ -39,7 +39,7 @@ task:
       grouped_node_p1: [[0, 1, 2, 3, 4, 5, 6]]  # atom indices of initial fragment
     settings:
       part1_pert:
-        fixed: 1
+        free: 1
       known_anchor:
         none: 1
 
@@ -49,6 +49,7 @@ noise:
   num_steps: 100
   prior:
     part1:
+      from_prior: True  # since not know fragment position, sample from prior distribution initally
       pos_only: True
       pos: 
         name: allpos
