@@ -5,7 +5,7 @@ from torch.nn import functional as F
 from torch_scatter import scatter_mean, scatter_sum
 
 try:
-    from utils.motion import apply_torsional_rotation_multiple_domains
+    from pocketxmol.utils.motion import apply_torsional_rotation_multiple_domains
 except:
     pass
 
