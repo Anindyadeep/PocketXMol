@@ -44,32 +44,12 @@ from torch_geometric.utils import (
 )
 from torch_scatter import scatter_min
 
-<<<<<<< HEAD
 from pocketxmol.models.transition import *
-
 from pocketxmol.utils.train_noise import get_vector, get_vector_list, combine_vectors_indexed
 from pocketxmol.utils.data import Mol3DData, PocketMolData
 from pocketxmol.utils.dataset import *
 from pocketxmol.utils.misc import *
 from pocketxmol.process.utils_process import process_raw
-# from utils.train import inf_iterator
-# from utils.protein_ligand import ATOM_FAMILIES
-# from utils.reconstruct import reconstruct_from_generated_with_edges
-
-=======
-# Local imports
-sys.path.append('.')
-from models.transition import *
-from process.utils_process import process_raw
-from utils.data import Mol3DData, PocketMolData
-from utils.dataset import *
-from utils.misc import *
-from utils.train_noise import (
-    combine_vectors_indexed,
-    get_vector,
-    get_vector_list,
-)
->>>>>>> master
 
 # Configuration constants for different generation modes
 CONF_SETTINGS = ['free', 'flexible', 'torsional', 'rigid']

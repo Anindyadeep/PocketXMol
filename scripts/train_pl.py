@@ -41,7 +41,6 @@ from torch_geometric.loader import DataLoader
 
 # Local imports
 sys.path.append('.')
-<<<<<<< HEAD
 from pocketxmol.models.maskfill import PMAsymDenoiser
 from pocketxmol.models.loss import get_loss_func
 from pocketxmol.utils.dataset import ForeverTaskDataset
@@ -49,17 +48,6 @@ from pocketxmol.utils.transforms import FeaturizeMol, Compose, get_transforms, F
 from pocketxmol.utils.misc import *
 from pocketxmol.utils.train import get_optimizer, get_scheduler, GradualWarmupScheduler
 from pocketxmol.utils.sample_noise import get_sample_noiser
-=======
-from models.loss import get_loss_func
-from models.maskfill import PMAsymDenoiser
-from utils.dataset import ForeverTaskDataset
-from utils.misc import *
-from utils.sample_noise import get_sample_noiser
-from utils.train import GradualWarmupScheduler, get_optimizer, get_scheduler
-from utils.transforms import Compose, FeaturizeMol, FeaturizePocket, get_transforms
-
-torch.set_float32_matmul_precision('medium')
->>>>>>> master
 
 
 def copy_py_files(src_dir, dst_dir, base=False):
@@ -418,13 +406,7 @@ is_vscode = False
 if os.environ.get("TERM_PROGRAM") == "vscode":
     is_vscode = True
 
-<<<<<<< HEAD
 def main():
-=======
-if __name__ == '__main__':
-    from pytorch_lightning.loggers import TensorBoardLogger  # only training script need this
-    # Parse arguments
->>>>>>> master
     parser = argparse.ArgumentParser()
     parser.add_argument('--config', type=str,
         default='configs/train/train_pxm.yml')

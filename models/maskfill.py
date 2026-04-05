@@ -17,7 +17,6 @@ from torch.nn import Module
 from torch.nn import functional as F
 from tqdm import tqdm
 
-<<<<<<< HEAD
 # from models.diffusion import extract
 # from models.egnn import EGNN, EGNNEncodeer
 # from models.transition import CategoricalTransition, ContigousTransition, GeneralCategoricalTransition
@@ -36,18 +35,6 @@ from pocketxmol.models.corrector import correct_pos, get_dihedral_batch
 from pocketxmol.models.diffusion import *
 # from .debug import check_true_bonds_len, check_pred_bonds_len
 # from utils.misc import unique
-
-=======
-# Local imports
-from models.graph import NodeEdgeNet
-from models.graph_context import ContextNodeEdgeNet
-from models.graph_gvp import ContextNodeEdgeNetGVP
-from models.ipa import ContextGAEdgeNet, GAEncoder
-
-from models.common import *
-from models.corrector import correct_pos, get_dihedral_batch
-from models.diffusion import *
->>>>>>> master
 
 
 class PMAsymDenoiser(Module):

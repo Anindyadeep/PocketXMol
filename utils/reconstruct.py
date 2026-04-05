@@ -33,16 +33,9 @@ from rdkit import Geometry
 from rdkit.Chem import AllChem as Chem
 from scipy.spatial.distance import pdist, squareform
 
-<<<<<<< HEAD
 from pocketxmol.process.process_torsional_info import get_mol_from_data
 from pocketxmol.utils.misc import time_limit, TimeoutException
 # from .protein_ligand import ATOM_FAMILIES_ID
-
-=======
-# Local imports
-from process.process_torsional_info import get_mol_from_data
-from utils.misc import TimeoutException, time_limit
->>>>>>> master
 
 # Module-level constants
 ptable = Chem.GetPeriodicTable()

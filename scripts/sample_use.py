@@ -35,7 +35,6 @@ from rdkit import Chem
 from torch_geometric.loader import DataLoader
 from tqdm.auto import tqdm
 
-<<<<<<< HEAD
 
 from .train_pl import DataModule
 from pocketxmol.models.maskfill import PMAsymDenoiser
@@ -47,25 +46,6 @@ from pocketxmol.utils.dataset import UseDataset
 from pocketxmol.utils.sample_noise import get_sample_noiser
 from pocketxmol.process.utils_process import extract_pocket, add_pep_bb_data, get_peptide_info, get_input_from_file,\
     make_dummy_mol_with_coordinate
-=======
-# Local imports
-sys.path.append('.')
-from models.maskfill import PMAsymDenoiser
-from models.sample import get_cfd_traj, sample_loop3, seperate_outputs2
-from process.utils_process import (
-    add_pep_bb_data,
-    extract_pocket,
-    get_input_from_file,
-    get_peptide_info,
-    make_dummy_mol_with_coordinate,
-)
-from scripts.train_pl import DataModule
-from utils.dataset import UseDataset
-from utils.misc import *
-from utils.reconstruct import *
-from utils.sample_noise import get_sample_noiser
-from utils.transforms import *
->>>>>>> master
 
 
 def print_pool_status(pool, logger, is_pep: bool = False) -> None:

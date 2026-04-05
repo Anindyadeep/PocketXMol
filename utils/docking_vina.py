@@ -16,12 +16,8 @@ import AutoDockTools
 import os
 import contextlib
 
-<<<<<<< HEAD
 # from utils.reconstruct import reconstruct_from_generated
 from pocketxmol.utils.docking_qvina import get_random_id, BaseDockingTask
-=======
-from utils.docking_qvina import get_random_id, BaseDockingTask
->>>>>>> master
 
 
 def supress_stdout(func):
