@@ -1,8 +1,7 @@
 import numpy as np
 import torch
 from torch.nn import functional as F
-from scipy.stats import vonmises, norm
-from torch_scatter import scatter_add
+from scipy.stats import vonmises
 
 
 def quat_1ijk_to_mat(quat):

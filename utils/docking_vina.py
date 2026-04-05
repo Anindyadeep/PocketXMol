@@ -1,8 +1,8 @@
-'''
-from targetdiff
-'''
+"""Vina Docking Utilities (from TargetDiff).
 
-
+Molecular docking using AutoDock Vina for protein-ligand binding prediction.
+Adapted from TargetDiff.
+"""
 
 from openbabel import pybel
 from meeko import MoleculePreparation
@@ -16,8 +16,12 @@ import AutoDockTools
 import os
 import contextlib
 
+<<<<<<< HEAD
 # from utils.reconstruct import reconstruct_from_generated
 from pocketxmol.utils.docking_qvina import get_random_id, BaseDockingTask
+=======
+from utils.docking_qvina import get_random_id, BaseDockingTask
+>>>>>>> master
 
 
 def supress_stdout(func):
@@ -279,28 +283,3 @@ class VinaDockingTask(BaseDockingTask):
             return [{'affinity': results[0], 'pose': results[1]}]
         else:
             return [{'affinity': results}]
-
-
-# if __name__ == '__main__':
-#     lig_pdbqt = 'data/lig.pdbqt'
-#     mol_file = 'data/1a4k_ligand.sdf'
-#     a = PrepLig(mol_file, 'sdf')
-#     # mol_file = 'CC(=C)C(=O)OCCN(C)C'
-#     # a = PrepLig(mol_file, 'smi')
-#     a.addH()
-#     a.gen_conf()
-#     a.get_pdbqt(lig_pdbqt)
-#
-#     prot_file = 'data/1a4k_protein_chainAB.pdb'
-#     prot_dry = 'data/protein_dry.pdb'
-#     prot_pqr = 'data/protein.pqr'
-#     prot_pdbqt = 'data/protein.pdbqt'
-#     b = PrepProt(prot_file)
-#     b.del_water(prot_dry)
-#     b.addH(prot_pqr)
-#     b.get_pdbqt(prot_pdbqt)
-#
-#     dock = VinaDock(lig_pdbqt, prot_pdbqt)
-#     dock.get_box()
-#     dock.dock()
-    

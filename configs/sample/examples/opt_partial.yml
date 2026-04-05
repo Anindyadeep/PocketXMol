@@ -7,46 +7,51 @@ sample:
 
 
 data:
-  protein_path: data/examples/smallmol/2ar9_A.pdb
-  input_ligand: data/examples/smallmol/fragment.sdf
+  protein_path: data/examples/smallmol/moad_62740_pro.pdb
+  input_ligand: data/examples/smallmol/moad_62740_mol.sdf
   is_pep: False
   pocket_args:
-    radius: 13
+    radius: 10
 
 
 transforms:
+  featurizer:
+    mol_as_pocket_center: True  # use input ligand center as pocket center
   variable_mol_size:  # variable mol size
     name: variable_mol_size
     num_atoms_distri:
-      strategy: mol_atoms_based  # mol size from Normal(mean=28, std=2)
+      strategy: mol_atoms_based  # mol size from Normal(mean=40, std=3)
       mean:
         coef: 0
-        bias: 28
+        bias: 38
       std:
         coef: 0
         bias: 2
       min: 5
-    not_remove: [0, 1, 2, 3, 4, 5, 6]  # set this the same as init_frag so that these atoms will not be removed
+    not_remove: [12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37]  # set this so that these atoms will not be removed
 
 
-# The following is for fragment growing with fixed fragment position
+# The following is for fragment linking with fixed fragment position
 
 task:
   name: maskfill
   transform:
     name: maskfill
     preset_partition:
-      grouped_node_p1: [[0, 1, 2, 3, 4, 5, 6]]  # atom indices of initial fragment
+      grouped_node_p1: [[12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37]]  # atom indices of part1 fragments
+      # node_p2: [0,1,2,3,4,5,6]  # can also use node_p2 to specify atoms to be generated
+      grouped_anchor_p1: [[12]]  # specify allowed connecting atoms for the fragment
     settings:
       part1_pert:
         fixed: 1
       known_anchor:
-        none: 1
+        all: 1
 
 
 noise:
   name: maskfill
-  num_steps: 100
+  num_steps: 50
+  init_step: 0.5  # smaller means more similar to input structure
   prior:
     part1:
       pos_only: True

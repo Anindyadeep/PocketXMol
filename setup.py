@@ -17,7 +17,7 @@ def get_requirements():
         "torch-geometric>=2.3.0",
         "torch-scatter",
         "torch-sparse", 
-        "torch-cluster"
+        "torch-cluster",
         
         # Scientific computing
         "numpy>=1.24,<2.0",

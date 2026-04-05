@@ -8,10 +8,15 @@ from easydict import EasyDict
 from tqdm import tqdm
 import torch
 from torch_geometric.utils import subgraph, bipartite_subgraph, to_undirected
+<<<<<<< HEAD
 # from torch.nn import Module
 # from torch.nn import functional as F
 # from models.transition import ContigousTransition, GeneralCategoricalTransition
 from pocketxmol.models.diffusion import *
+=======
+
+from models.diffusion import *
+>>>>>>> master
 
 from pocketxmol.utils.data import Mol3DData
 from pocketxmol.utils.prior import get_prior, MolPrior

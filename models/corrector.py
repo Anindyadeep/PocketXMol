@@ -4,10 +4,9 @@ import torch.linalg as la
 from torch.nn import functional as F
 from torch_scatter import scatter_mean, scatter_sum
 
-try:
+def _get_torsional_rotation_fn():
     from pocketxmol.utils.motion import apply_torsional_rotation_multiple_domains
-except:
-    pass
+    return apply_torsional_rotation_multiple_domains
 
 
 def grad_len_to_pos(pos, edge_index, config):
@@ -147,7 +146,8 @@ def correct_pos(pos_in, pos_out,
         tor_bonds = tor_bonds_anno[:, 1:]
         index_tor_twisted = twisted_nodes_anno[:, 0]
         twisted_nodes = twisted_nodes_anno[:, 1]
-        pos_tor = apply_torsional_rotation_multiple_domains(pos_in, 
+        _apply_tor_rot = _get_torsional_rotation_fn()
+        pos_tor = _apply_tor_rot(pos_in,
                                 tor_order, tor_bonds, angles_tri,
                                 twisted_nodes, index_tor_twisted)
     else:
